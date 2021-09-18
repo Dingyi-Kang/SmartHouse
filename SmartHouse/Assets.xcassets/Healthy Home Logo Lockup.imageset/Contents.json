@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Healthy Home Logo Lockup.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Healthy Home Logo Lockup@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Healthy Home Logo Lockup@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

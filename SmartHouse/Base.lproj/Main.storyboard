@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vFN-uj-Au0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="SmartHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arView>
+                    <connections>
+                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="136"/>
+        </scene>
+        <!--Home Page-->
+        <scene sceneID="Xlq-wn-9iO">
+            <objects>
+                <viewController id="vFN-uj-Au0" customClass="HomePage" customModule="SmartHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NfJ-HM-MDL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="House Graphic" translatesAutoresizingMaskIntoConstraints="NO" id="6bN-Ps-DN0">
+                                <rect key="frame" x="87" y="44" width="240" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="Sll-ts-AXt"/>
+                                    <constraint firstAttribute="width" secondItem="6bN-Ps-DN0" secondAttribute="height" multiplier="120:101" id="ZeG-ww-t2W"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inV-Y2-fGf" userLabel="fan">
+                                <rect key="frame" x="52" y="363" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="4QP-8b-Ztz"/>
+                                    <constraint firstAttribute="width" secondItem="inV-Y2-fGf" secondAttribute="height" multiplier="1:1" id="iM2-xh-Rnu"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Fan Graphic"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcV-BV-EPT" userLabel="radient">
+                                <rect key="frame" x="232" y="266" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="UjZ-ib-QiL"/>
+                                    <constraint firstAttribute="width" secondItem="HcV-BV-EPT" secondAttribute="height" multiplier="1:1" id="nOI-0S-Ei0"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Radiation Graphic"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muw-HO-KuF" userLabel="temperature">
+                                <rect key="frame" x="52" y="571.5" width="119" height="123"/>
+                                <state key="normal" backgroundImage="Temperature Graphic"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MW-q7-zFX" userLabel="bug">
+                                <rect key="frame" x="146" y="456" width="222" height="124"/>
+                                <state key="normal" backgroundImage="Bug Graphic"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNH-Rm-ytC" userLabel="CO2">
+                                <rect key="frame" x="195" y="658.5" width="164" height="119"/>
+                                <state key="normal" backgroundImage="Co2 Graphic"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Q3-UR-Knd"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HcV-BV-EPT" firstAttribute="top" secondItem="6bN-Ps-DN0" secondAttribute="bottom" constant="20" id="079-An-RZx"/>
+                            <constraint firstItem="HcV-BV-EPT" firstAttribute="centerX" secondItem="NfJ-HM-MDL" secondAttribute="centerX" constant="95" id="6xx-TL-uvN"/>
+                            <constraint firstItem="4MW-q7-zFX" firstAttribute="centerY" secondItem="NfJ-HM-MDL" secondAttribute="centerY" constant="70" id="7tQ-AN-dMD"/>
+                            <constraint firstItem="inV-Y2-fGf" firstAttribute="centerX" secondItem="NfJ-HM-MDL" secondAttribute="centerX" constant="-100" id="PQ5-cG-g0a"/>
+                            <constraint firstItem="muw-HO-KuF" firstAttribute="leading" secondItem="inV-Y2-fGf" secondAttribute="leading" id="UgY-wU-vlq"/>
+                            <constraint firstItem="6bN-Ps-DN0" firstAttribute="centerX" secondItem="NfJ-HM-MDL" secondAttribute="centerX" id="VL1-qV-2Jh"/>
+                            <constraint firstItem="vNH-Rm-ytC" firstAttribute="centerX" secondItem="NfJ-HM-MDL" secondAttribute="centerX" constant="70" id="VNG-76-iyE"/>
+                            <constraint firstItem="vNH-Rm-ytC" firstAttribute="centerY" secondItem="NfJ-HM-MDL" secondAttribute="centerY" constant="270" id="d49-8h-823"/>
+                            <constraint firstItem="inV-Y2-fGf" firstAttribute="centerY" secondItem="NfJ-HM-MDL" secondAttribute="centerY" constant="-30" id="gQ8-Jx-QMN"/>
+                            <constraint firstItem="4MW-q7-zFX" firstAttribute="centerX" secondItem="NfJ-HM-MDL" secondAttribute="centerX" constant="50" id="gVy-Td-aZj"/>
+                            <constraint firstItem="8Q3-UR-Knd" firstAttribute="trailing" secondItem="6bN-Ps-DN0" secondAttribute="trailing" constant="87" id="iFu-CK-PQ8"/>
+                            <constraint firstItem="muw-HO-KuF" firstAttribute="centerY" secondItem="NfJ-HM-MDL" secondAttribute="centerY" constant="185" id="oG8-2W-X4f"/>
+                            <constraint firstItem="6bN-Ps-DN0" firstAttribute="top" secondItem="8Q3-UR-Knd" secondAttribute="top" id="qpO-zX-Bzv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDb-jE-YW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260.86956521739131" y="135.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bug Graphic" width="221.5" height="123.5"/>
+        <image name="Co2 Graphic" width="163.5" height="119"/>
+        <image name="Fan Graphic" width="93.5" height="93.5"/>
+        <image name="House Graphic" width="187.5" height="132.5"/>
+        <image name="Radiation Graphic" width="160" height="162.5"/>
+        <image name="Temperature Graphic" width="118.5" height="122.5"/>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
